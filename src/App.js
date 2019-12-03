@@ -1,6 +1,7 @@
 import React from 'react';
 import { useWindowLocationPathname, usePushPath } from './WindowLocation';
 import { useOutboundRoute, useFirstMatch } from './DumbRouter';
+import FallbackComponent from './FallbackComponent';
 
 const App = () => {
   const pushPath = usePushPath();
@@ -12,7 +13,7 @@ const App = () => {
 
   const pathname = useWindowLocationPathname();
 
-  const value = useFirstMatch(pathname);
+  const { Component } = useFirstMatch(pathname);
 
   return (
     <div>
@@ -21,8 +22,9 @@ const App = () => {
         <li><button onClick={() => pushPath(link2())}>page 2</button></li>
         <li><button onClick={() => pushPath(link3({ id: 12345 }))}>page 3</button></li>
         <li><button onClick={() => pushPath(link4())}>page 4</button></li>
+        <li><button onClick={() => pushPath("/gibberish")}>unknown</button></li>
       </ul>
-      <pre>{ JSON.stringify(value, null, '  ') }</pre>
+      { Component ? <Component /> : <FallbackComponent /> }
     </div>
   );
 }
