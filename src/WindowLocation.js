@@ -32,10 +32,19 @@ export const useWindowLocationPathname = () => useContext(PathnameContext);
 export const usePushPath = () => {
   const setCurrentWindowLocation = useContext(UpdateContext);
 
-  return path => {
+  return useCallback(path => {
     window.history.pushState({}, null, path);
     setCurrentWindowLocation();
-  };
+  },[setCurrentWindowLocation]);
+};
+
+export const useReplacePath = () => {
+  const setCurrentWindowLocation = useContext(UpdateContext);
+
+  return useCallback(path => {
+    window.history.replaceState({}, null, path);
+    setCurrentWindowLocation();
+  },[setCurrentWindowLocation]);
 };
 
 export default WindowLocation;
