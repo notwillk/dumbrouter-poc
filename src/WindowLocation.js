@@ -1,6 +1,4 @@
-import React, { useContext, useCallback, useState } from 'react';
-
-// Do all of the window events?....
+import React, { useContext, useCallback, useEffect, useState } from 'react';
 
 const PathnameContext = React.createContext(null);
 const UpdateContext = React.createContext(() => {});
@@ -13,6 +11,14 @@ const WindowLocation = ({children}) => {
   const setCurrentWindowLocation = useCallback(() => {
     setLocation(getPathname());
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('popstate', setCurrentWindowLocation);
+
+    return () => {
+      window.removeEventListener('popstate', setCurrentWindowLocation);
+    };
+  }, [setCurrentWindowLocation]);
 
   return (
     <UpdateContext.Provider value={setCurrentWindowLocation}>
