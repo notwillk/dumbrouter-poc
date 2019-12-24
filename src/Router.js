@@ -1,5 +1,5 @@
 import React from 'react';
-import DumbRouter from './DumbRouter';
+import PojoRouter from 'pojo-router';
 import * as namedPaths from './routes';
 import PageComponent from './PageComponent';
 import OtherComponent from './OtherComponent';
@@ -14,9 +14,9 @@ const routes = [
 const notFound = { nothing: true };
 
 const Router = ({ children }) => (
-  <DumbRouter namedPaths={namedPaths} routes={routes} notFound={notFound}>
+  <PojoRouter namedPaths={namedPaths} routes={routes} notFound={notFound}>
     { children }
-  </DumbRouter>
+  </PojoRouter>
 );
 
 export default Router;

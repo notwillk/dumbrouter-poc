@@ -1,15 +1,16 @@
 import React, { Suspense } from 'react';
-import WindowLocation from './WindowLocation';
+import BrowserPathname from 'react-browser-pathname';
+
 import App from './App';
 import Router from './Router';
 
 const AppProviders = () => (
   <Suspense fallback={<div>Loading...</div>}>
-    <WindowLocation>
+    <BrowserPathname>
       <Router>
         <App />
       </Router>
-    </WindowLocation>
+    </BrowserPathname>
   </Suspense>
 );
 

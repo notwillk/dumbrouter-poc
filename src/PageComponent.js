@@ -1,10 +1,8 @@
 import React from 'react';
-import { useWindowLocationPathname } from './WindowLocation';
-import { useFirstMatch } from './DumbRouter';
+import { useCurrentMatch } from 'pojo-router';
 
 const PageComponent = () => {
-  const pathname = useWindowLocationPathname();
-  const { abc, id } = useFirstMatch(pathname);
+  const { abc, id } = useCurrentMatch();
 
   return (
     <ol>

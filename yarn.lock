@@ -7162,6 +7162,14 @@ pnp-webpack-plugin@1.5.0:
   dependencies:
     ts-pnp "^1.1.2"
 
+pojo-router@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/pojo-router/-/pojo-router-0.0.3.tgz#f7192cbc4826399f9419ec9b1ee8998bd715dbc9"
+  integrity sha512-9cp12E0/mk48vLtEgjbeAOp+mi3wNhNJDGOqiUYCXB46JIJsPKso04L91RLi54UaaY2+3iPARCzw9Pjk8O2Ktg==
+  dependencies:
+    lodash.isstring "^4.0.1"
+    path-to-regexp "^6.1.0"
+
 portfinder@^1.0.9:
   version "1.0.25"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.25.tgz#254fd337ffba869f4b9d37edc298059cb4d35eca"
@@ -8084,6 +8092,11 @@ react-app-polyfill@^1.0.4:
     raf "3.4.1"
     regenerator-runtime "0.13.3"
     whatwg-fetch "3.0.0"
+
+react-browser-pathname@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-browser-pathname/-/react-browser-pathname-0.0.3.tgz#b771aefc159197fba3034e59d8bd245084bbb27d"
+  integrity sha512-yFbxbyl80+35hcMgsZOJmrHFbPvzCcs7NPpll3VW5n2tLOLBLFVFcCZUC3NItZoJ3klhUoFrrb1cyjWo7HA2dg==
 
 react-dev-utils@^9.1.0:
   version "9.1.0"

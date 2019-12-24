@@ -1,6 +1,6 @@
 import React from 'react';
-import { usePushPath } from './WindowLocation';
-import { useOutboundRoute } from './DumbRouter';
+import { usePushPath } from 'react-browser-pathname';
+import { useOutboundRoute } from 'pojo-router';
 
 const Navigation = () => {
   const pushPath = usePushPath();

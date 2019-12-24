@@ -5,7 +5,9 @@
   "dependencies": {
     "lodash.isstring": "^4.0.1",
     "path-to-regexp": "^6.1.0",
+    "pojo-router": "^0.0.3",
     "react": "^16.12.0",
+    "react-browser-pathname": "0.0.3",
     "react-dom": "^16.12.0"
   },
   "devDependencies": {

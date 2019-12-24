@@ -1,10 +1,8 @@
 import React from 'react';
-import { useWindowLocationPathname } from './WindowLocation';
-import { useFirstMatch } from './DumbRouter';
+import { useCurrentMatch } from 'pojo-router';
 
 const FallbackComponent = () => {
-  const pathname = useWindowLocationPathname();
-  const value = useFirstMatch(pathname);
+  const value = useCurrentMatch();
 
   return <pre>{ JSON.stringify(value, null, '  ') }</pre>;
 };
